@@ -1,0 +1,33 @@
+var modelS = {
+make: "Tesla",
+model: "Model S",
+cost: 70000,
+preowned: false,
+miles: 0,
+finalCost: function(discount) {
+this.cost = this.cost - (this.cost * (discount/100));
+return this.cost;
+}
+};
+
+var modelX = {
+make: "Tesla",
+model: "Model X",
+cost: 100000,
+preowned: true,
+miles: 50000,
+finalCost: function(discount) {
+this.cost = this.cost - (this.cost * (discount/100));
+return this.cost;
+}
+};
+
+var updatedMiles = modelX.miles + 10000;
+
+console.log(modelS.make);
+console.log(modelS.model);
+
+console.log(modelX.finalCost(30));
+console.log(updatedMiles);
+
+console.log(modelS.make.toUpperCase());
